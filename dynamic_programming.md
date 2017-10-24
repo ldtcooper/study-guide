@@ -1,9 +1,9 @@
-# Dynamic Programming
+## Dynamic Programming
 
-## What is it?
+### What is it?
 Breaking problems down into smaller pieces, then storing them to optimize later problem solving.
 
-### Two Paradigms
+#### Two Paradigms
 
 **Top-down**
   - Build stacks and save work to cache as the problem breaks down
