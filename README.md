@@ -1,2 +1,5 @@
-# study-guide
-A collection of things that I'm studying at the moment, conveniently collated for later 
+# Study Guide
+
+Here are some topics I've been looking into recently:
+
+  - [Dynamic Programming](/dynamic_programming.md)
