@@ -31,4 +31,4 @@ Breaking problems down into smaller pieces, then storing them to optimize later 
     - `[1, 5, 2, 6, 10] => [1, 5, 6, 10] OR [1, 2, 6, 10]`
     - `[1, 5, 2, 6, 10, 4] => [1, 5, 6, 10] OR [1, 2, 6, 10]`
     - `[1, 5, 2, 6, 10, 4, 20] => [1, 5, 6, 10, 20] OR [1, 2, 6, 10, 20]`
-  - At each step, find the longest sequence that ends with something smaller than the new entrant.
+  - At each step, find the longest sequence in cache that ends with something smaller than the new entrant, and cache it. At the end, just do a linear search to return the largest solution.
