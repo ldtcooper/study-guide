@@ -36,4 +36,9 @@
 ### Indices
   - Speed up DB lookups from O(n) to O(k)
   - Good to index rows that are accessed frequently.
-  
+
+### Session Storage
+  - Often, user ID is stored in a cookie which can be used to look up data from DB
+  - If DB is reading/writing too much session data, it will get slow
+  - Session data can be stored in volatile memory instead of persistent memory, but that leaves it vulnerable to shutdowns
+  - Session info can be moved to cookie itself if there is no sensitive info in it.
