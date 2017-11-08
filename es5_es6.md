@@ -30,4 +30,36 @@ Arrow functions are not totally interchangeable with those made with the keyword
 ```
 
 #### `const` and `let`
-ES6 introduces two new variable definitions: `const` and `let`. These are subtly different from ES5's `var`
+ES6 introduces two new variable definitions: `const` and `let`. These are subtly different from ES5's `var`. For one, they are block scoped, not function scoped. This means that a `var` defined in a for loop in a function is reachable by code outside of the loop, while a `let` inside of a for loop is not.
+
+For example:
+
+```javascript
+  function foo() {
+    for (var i = 0; i < 10; i++) {
+      let x = 7;
+      console.log(i + x);
+    }
+    console.log(i); // => returns 10
+    console.log(x); // => raises error because x is not defined
+  }
+```
+
+`const` comes with the added bonus of being semi-immutable. While something defined with `const` cannot be reassigned, it can change under certain circumstances. For example:
+
+```javascript
+  const x = 7;
+  x = 8; // this raises an error
+  x // => 7
+
+  const y = [1,2,3];
+  y.push(4);
+  y // => [1,2,3,4]
+  y[0] = "a";
+  y // => ["a", 2, 3, 4]
+
+  const z = {};
+  z // => {}
+  z["a"] = 1;
+  z // => {"a": 1}
+```
