@@ -2,7 +2,16 @@
 
 Here are some topics I've been looking into recently:
 
-  - [Dynamic Programming](/dynamic_programming.md)
-  - [JavaScript Scope](/js_scope.md)
-  - [Python I/O](/python_io.md)
-  - [Scaling](/scaling.md)
+#### JavaScript
+
+- [Scope](/js_scope.md)
+- [ES5 vs. ES6](/es5_es6.md)
+
+#### Python
+- [Python I/O](/python_io.md)
+
+#### Programming Concepts
+- [Dynamic Programming](/dynamic_programming.md)
+
+#### Software Development
+- [Scaling](/scaling.md)
