@@ -63,3 +63,27 @@ For example:
   z["a"] = 1;
   z // => {"a": 1}
 ```
+
+#### Default Arguments
+Much like languages like Ruby or Python, ES6 accepts functions with default arguments. ES5 does not.
+
+```javascript
+  const plusOneDefault = (m, n = 1) => {
+    return m + n;
+  }
+
+  plusOneDefault(10) // => 11;
+  plusOneDefault(10, 5) // => 15;
+```
+
+The closest ES5 approximation would be something like this:
+
+```javascript
+  function plusOneDefault(m, n) {
+    if (n === undefined) {
+      n = 1;
+    }
+
+    return(m + n);
+  }
+```
