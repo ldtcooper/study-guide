@@ -7,6 +7,9 @@ Here are some topics I've been looking into recently:
 - [Scope](/js_scope.md)
 - [ES5 vs. ES6](/es5_es6.md)
 
+#### React
+- [Lifecycle Methods](/react_lifecycle.md)
+
 #### Python
 - [Python I/O](/python_io.md)
 
