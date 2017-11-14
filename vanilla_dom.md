@@ -43,3 +43,10 @@ We can also add elements to a certain node. The following code will create an em
   myNewElement.textContent = "this is content";
   myElement.parent.appendChild(myElement);
 ```
+
+## Event Listeners
+Use `.addEventListener()` to add event listeners to nodes. It takes an event type (click, change, mouseover, etc.) and a callback that will be executed when the action is done.
+
+On things like submit buttons, it is important to use the `.preventDefault()` to stop the browser from executing its default behavior -- e.g. sending off a query string. 
+
+`.stopPropogation()` prevents elements from bubbling up the DOM.
