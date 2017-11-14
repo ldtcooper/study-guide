@@ -16,4 +16,14 @@ This can be checked against other selectors with `.matches()` which also takes a
 ## Traversing the DOM 
 The DOM is a tree, and can be traversed with certain DOM methods.
   - `elem.childNodes` returns a list of the children of a node.
-  - 
+  - `elem.parentNode` returns the parent node.
+  - `nextSibling` and `previousSibling` traverse the DOM horizontally.
+  
+## Modifying Classes and Attributes
+
+Adding or removing classes is as easy as using the `elem.classList.add()` or `.classList.remove()` methods.
+Values can be set with `elem.value = 'something'`. 
+
+`.getAttribute()` and `.setAttribute()` directly modify the HTML and trigger redraws -- more expensive.
+
+`elem.style.marginLeft = '2em'` will add the style `margin-left: 2em;` to the element. 
