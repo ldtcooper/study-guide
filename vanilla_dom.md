@@ -27,3 +27,19 @@ Values can be set with `elem.value = 'something'`.
 `.getAttribute()` and `.setAttribute()` directly modify the HTML and trigger redraws -- more expensive.
 
 `elem.style.marginLeft = '2em'` will add the style `margin-left: 2em;` to the element. 
+
+## Modifying the DOM
+Delete nodes indirectly by selecting a node, getting its parent, and then deleting a certain child.
+For example:
+```javascript
+  const myElement = document.querySelector("li");
+  myElement.parent.removeChild(myElement)
+```
+
+We can also add elements to a certain node. The following code will create an empty `<li>` element, add some text to it, then add it to the selected `<ul>`.
+```javascript
+  const myElement = document.querySelector("ul");
+  const myNewElement = document.createElement("li");
+  myNewElement.textContent = "this is content";
+  myElement.parent.appendChild(myElement);
+```
