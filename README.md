@@ -11,6 +11,9 @@ Here are some topics I've been looking into recently:
 #### React
 - [Lifecycle Methods](/react_lifecycle.md)
 
+#### D3
+- [Basics](/d3_basics.md)
+
 #### Python
 - [Python I/O](/python_io.md)
 
