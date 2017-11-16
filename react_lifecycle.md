@@ -64,4 +64,15 @@ Used to trigger re-renders based off of new props.
 
 #### `shouldComponentUpdate()`
 
-Returns `true` by default, but can be used to prevent components from re-rendering unless relevant props/state changes.
+Called when a component receives new props.
+Returns `true` by default, but can be used to prevent components from re-rendering unless relevant props/state changes. In that case, you can change it to return `false`.
+
+#### `componentWillUpdate()`
+
+Called right before a component re-renders.
+Used like `componentWillReceiveProps()` but has no access to previous props.
+
+#### `componentDidUpdate()`
+
+Called right after a component updates.
+Used to update DOM in response to prop or state changes. 
