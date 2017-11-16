@@ -31,17 +31,20 @@
   - y-axis must be reversed because SVG is y-down.
   - Example for y-axis:
   ``` javascript
-
     // this sets up a y axis with a domain of 0-80 and a range of 0-200
     const y = d3.scaleLinear().domain([0, 80]).range([200, 0]);
     // with an actual dataset, you can set up a fitted y-axis like this
     y.domain(d3.extent(data, function(d) { return d.amount });
     })
   ```
-  - Dates have their own scale with a domain of dates:
+  - Dates have their own scale with a domain of date objects:
   ``` javascript
     const x = d3.scaleTime().domain([
       new Date(Date.parse('2014-01-01'),
       new Date(Date.parse('2015-01-01'),
-    ])
+    ]);
   ```
+
+### Axes
+  - D3 has built in helper methods for creating axes ( e.g. `d3.axisBottom(scale)`) and tick marks (`.ticks(numOfTicks)`)
+  - 

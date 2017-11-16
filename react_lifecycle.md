@@ -45,11 +45,12 @@ Mount methods are called as the component is inserted into the DOM.
 
 #### `componentWillMount()`
 
-This is called right before an object is initially rendered. Calling `this.setState` here will not re-render the component.
+This is called right before an object is initially rendered. Calling `this.setState` here will not re-render the component. There is no DOM to use here.
+Commonly used to do app configuration in root component.
 
 #### `componentDidMount()`
 
-Called right after an object is inserted into the DOM. Best place to call other JS libraries or to fetch data.
+Called right after an object is inserted into the DOM. Best place to call other JS libraries or to fetch data (AJAX calls!).
 
 ## Updating
 
@@ -57,3 +58,10 @@ These methods are called when a component's state or properties (props) are chan
 None of these are called for the first render.
 
 #### `componentWillReceiveProps()`
+
+Triggered when a component receives a new stream of props. Takes an argument (`nextProps`) and lets us access new props with that, and old props with `this.props`.
+Used to trigger re-renders based off of new props.
+
+#### `shouldComponentUpdate()`
+
+Returns `true` by default, but can be used to prevent components from re-rendering unless relevant props/state changes.
