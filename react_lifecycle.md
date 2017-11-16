@@ -75,4 +75,9 @@ Used like `componentWillReceiveProps()` but has no access to previous props.
 #### `componentDidUpdate()`
 
 Called right after a component updates.
-Used to update DOM in response to prop or state changes. 
+Used to update DOM in response to prop or state changes.
+
+#### `componentWillUnmount()`
+
+Called right before a component unmounts.
+This is used to clean up any debris left by the component such as event listeners or API calls.
