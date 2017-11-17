@@ -2,7 +2,7 @@
 
 Here are some topics I've been looking into recently:
 
-#### JavaScript
+### JavaScript
 
 - [Scope](/js_scope.md)
 - [ES5 vs. ES6](/es5_es6.md)
@@ -14,11 +14,13 @@ Here are some topics I've been looking into recently:
 #### D3
 - [Basics](/d3_basics.md)
 
-#### Python
+### Python
 - [Python I/O](/python_io.md)
 
 #### Programming Concepts
 - [Dynamic Programming](/dynamic_programming.md)
 
-#### Software Development
+### Software Development
 - [Scaling](/scaling.md)
+
+### Data Structures
