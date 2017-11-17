@@ -6,6 +6,7 @@ Here are some topics I've been looking into recently:
 
 - [Scope](/js_scope.md)
 - [ES5 vs. ES6](/es5_es6.md)
+- [Beyond ES6](/beyond_es6.md)
 - [Vanilla DOM Manipulation](/vanilla_dom.md)
 
 #### React
