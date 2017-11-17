@@ -34,7 +34,12 @@
 
 ### Async/Await
   Async is a syntactic sugar built on top of promises. Promises solved callback hell by letting us chain `.then()`. `async` can be put in front of a function declaration to make the function return a promise. `await` can be used in async functions to make an asynchronous function wait for a certain part to finish before moving on.
+  Useful to make a function wait for an API call to return.
 
   ```javascript
-    
+    export const fetchSearchGiphys = searchTerm => async function(dispatch) {
+      const data = await APIUtil.fetchSearchGiphys(searchTerm);
+      // won't return until data is filled
+      return data;
+    }
   ```
