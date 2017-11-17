@@ -24,3 +24,4 @@ Here are some topics I've been looking into recently:
 - [Scaling](/scaling.md)
 
 ### Data Structures
+- [Is a tree a BST?]()
