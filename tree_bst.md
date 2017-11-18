@@ -36,7 +36,7 @@ This solution is based off the one found at [this GeeksForGeeks article](http://
       return false;
     }
 
-    const leftResult = isBST(root.left, root.data - 1, minSeen);
+    const leftResult = isBST(root.left, root.data - 1, min_seen);
     const rightResult = isBST(root.right, maxSeen, root.data - 1);
 
     return(leftResult && rightResult);
