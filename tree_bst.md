@@ -42,3 +42,5 @@ function isBST(root, maxSeen, minSeen) {
   return(leftResult && rightResult);
 }
 ```
+
+In words, this means that isBST looks at a node, and takes arguments relating to other nodes that have been looked at. If the current node is `null`, that means that isBST has gotten all the way down a branch without return false, so that branch fulfills the requirements of a BST. The algorithm then looks at maxSeen and minSeen. If one is undefined, that means either that we are looking at the first node (too early to disqualify) or are going down the other branch (we don't need to keep track of the minimum on the left branch) and we can skip that condition. If the correct condition exists, we check if the root (the current node) is greater than the maximum value seen below it, or smaller than the minimum seen below it. How do we find those values? The next lines call the function recursively on each of the root's children. For the left subtree, the new maximum is defined as the parent's value - 1. For the right subtree, the new minimum is defined as the parent's value + 1.
