@@ -18,7 +18,7 @@ function isBST(root, maxSeen, minSeen) {
   }
 
   const leftResult = isBST(root.left, root.data - 1, minSeen);
-  const rightResult = isBST(root.right, maxSeen, root.data - 1);
+  const rightResult = isBST(root.right, maxSeen, root.data + 1);
 
   return(leftResult && rightResult);
 }
