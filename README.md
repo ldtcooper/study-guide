@@ -18,11 +18,11 @@ Here are some topics I've been looking into recently:
 ### Python
 - [Python I/O](/python_io.md)
 
-#### Programming Concepts
+### Programming Concepts
 - [Dynamic Programming](/dynamic_programming.md)
+
+#### Data Structures
+- [Is a tree a BST?](/tree_bst.md)
 
 ### Software Development
 - [Scaling](/scaling.md)
-
-### Data Structures
-- [Is a tree a BST?]()
