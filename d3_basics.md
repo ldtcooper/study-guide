@@ -14,6 +14,33 @@
     - If given `<div></div>`, `d3.select('div').append('p')` will give you `<div><p></p></div>`
   - `.attr(type, name)` will add an attribute of type (i.e. `class` or `id`) `type` with the name `name` to whatever it is chained on to.
     - `d3.select('p').attr('class', 'my-text')` will give the class `.my-text` to the first <p> element it finds.
+  - `.style(style, attribute)` adds a style on to the chained element.
+    - Ex: `d3.select('p').style('font-size', '16px')` will make the selected <p> element's text 16px big.
+  - Code sample to add an SVG circle on to the body, give it a class, move it around, and change its size:
+  ```javascript
+    // Creates SVG element
+    d3.select('body')
+      .append('svg')
+      .attr('height', 500)
+      .attr('width', 500);
+
+    // creates a circle element in the SVG
+    d3.select('svg')
+      .append('circle')
+      .attr('id', 'my-circle');
+
+    // moves circle 100px to the right
+    d3.select('#my-circle')
+      .attr('cx', '100');
+
+    // moves circle 300px down
+    d3.select('#my-circle')
+      .attr('cy', '300');
+      
+    // makes circle 20px in radius
+    d3.select('#my-circle')
+      .attr('r', '20');
+  ```
 
 
 ### Events
