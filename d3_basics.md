@@ -16,6 +16,7 @@
     - `d3.select('p').attr('class', 'my-text')` will give the class `.my-text` to the first <p> element it finds.
   - `.style(style, attribute)` adds a style on to the chained element.
     - Ex: `d3.select('p').style('font-size', '16px')` will make the selected <p> element's text 16px big.
+    - `.style()` can also take a callback as a second argument to conditionally style elements.
   - Code sample to add an SVG circle on to the body, give it a class, move it around, and change its size:
   ```javascript
     // Creates SVG element
@@ -73,6 +74,27 @@
       })
     ```
   - `d3.csv` turns the csv document into a JSON array of arrays
+
+### Data Binding
+  - `.data(dataObject)` links the selector it is chained with to the data inputted in `dataObject`.
+  - `.enter()` returns all elements in data without corresponding DOM elements.
+  - Similarly, `.exit()` returns all DOM elements without corresponding data.
+  - Data binding example:
+    ```javascript
+      const viz = d3.select('#viz-div').append('svg').attr('id', '#viz');
+
+      // assume no errors
+      d3.csv('datafiles/data.csv', (data) => {
+        // selects all circles (ghost selection) in viz and links them
+        // to the data, then appends a circle for each of the elements.
+        const dots = viz.selectAll('circle')
+          .data(data).enter().append('circle');
+
+        // the TMAX is a specific measurement in the data (d) bound to each element.
+        dots.attr('r', (d) => Math.abs(d.TMAX));
+
+      })
+    ```
 
 
 ## Graphing
