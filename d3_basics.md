@@ -36,10 +36,14 @@
     // moves circle 300px down
     d3.select('#my-circle')
       .attr('cy', '300');
-      
+
     // makes circle 20px in radius
     d3.select('#my-circle')
       .attr('r', '20');
+
+    // makes the circle dim grey
+    d3.select('#my-circle')
+      .style('fill', 'dimgrey')
   ```
 
 
@@ -53,6 +57,23 @@
       this.style.backgroundColor = 'red';
     })
   ```
+
+## Data Binding
+
+### Request Methods
+  - Async functions
+  - D3 exposes several methods to let it read in different data types:
+    - `d3.csv`, `d3.tsv`, `d3.html`, `d3.xml`, `d3.text`, `d3.json`
+  - These methods take two arguments: a path to the data document, and a callback that handles errors (optional) and data.
+    - e.g.:
+    ```javascript
+      d3.json('datafiles/data.json', (error, data) => {
+        console.log(error);
+        console.log(data);
+      })
+    ```
+  - `d3.csv` turns the csv document into a JSON array of arrays
+
 
 ## Graphing
   - Data fed into D3 as POJOS.
