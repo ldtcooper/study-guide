@@ -9,6 +9,13 @@
   - `d3.selectAll('.id');` selects element with id of `id`;
   - `.text()` returns the text of the element it is called on.
 
+### Changing Elements
+  - `.append(element)` will add on a particular element to the selected element as a child.
+    - If given `<div></div>`, `d3.select('div').append('p')` will give you `<div><p></p></div>`
+  - `.attr(type, name)` will add an attribute of type (i.e. `class` or `id`) `type` with the name `name` to whatever it is chained on to.
+    - `d3.select('p').attr('class', 'my-text')` will give the class `.my-text` to the first <p> element it finds.
+
+
 ### Events
 
   - `.on()` puts event handlers on a selected element. It takes an event type (click, mouseover, mouseleave, etc.) and a function that describes what the function does.
@@ -44,7 +51,3 @@
       new Date(Date.parse('2015-01-01'),
     ]);
   ```
-
-### Axes
-  - D3 has built in helper methods for creating axes ( e.g. `d3.axisBottom(scale)`) and tick marks (`.ticks(numOfTicks)`)
-  - 
