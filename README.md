@@ -14,6 +14,7 @@ Here are some topics I've been looking into recently:
 
 #### D3
 - [Basics](/d3_basics.md)
+- [Scales](/d3_scales.md)
 
 ### Python
 - [Python I/O](/python_io.md)
