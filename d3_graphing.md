@@ -29,3 +29,19 @@
   ```
 
 ## Data Labels
+  - Bind data to <g> elements, then append SVG elements to the <g> elements.
+  - Label data by appending an additional text element to the <g>.
+    - Example:
+    ```javascript
+      // dots is selection of all <g> elements with data bound to them
+
+      // this appends 5px circles to each data point
+      dots.append('circle')
+          .attr('r', 5);
+
+      // finds TMAX for each data point and appends that as text
+      dots.append('text')
+          .text(function(d) {
+            return d.TMAX;
+          });
+    ```
