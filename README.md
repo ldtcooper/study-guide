@@ -4,27 +4,28 @@ Here are some topics I've been looking into recently:
 
 ### JavaScript
 
-- [Scope](/js_scope.md)
-- [ES5 vs. ES6](/es5_es6.md)
-- [Beyond ES6](/beyond_es6.md)
-- [Vanilla DOM Manipulation](/vanilla_dom.md)
+- [Scope](/articles/js_scope.md)
+- [ES5 vs. ES6](/articles/es5_es6.md)
+- [Beyond ES6](/articles/beyond_es6.md)
+- [Vanilla DOM Manipulation](/articles/vanilla_dom.md)
 
 #### React
-- [Lifecycle Methods](/react_lifecycle.md)
+- [Lifecycle Methods](/articles/react_lifecycle.md)
+- [Jest and Enzyme](/articles/jest_and_enzyme.md)
 
 #### D3
-- [Basics](/d3_basics.md)
-- [Scales](/d3_scales.md)
-- [Graphing](/d3_graphing.md)
+- [Basics](/articles/d3_basics.md)
+- [Scales](/articles/d3_scales.md)
+- [Graphing](/articles/d3_graphing.md)
 
 ### Python
-- [Python I/O](/python_io.md)
+- [Python I/articles/O](/articles/python_io.md)
 
 ### Programming Concepts
-- [Dynamic Programming](/dynamic_programming.md)
+- [Dynamic Programming](/articles/dynamic_programming.md)
 
 #### Data Structures
-- [Is a tree a BST?](/tree_bst.md)
+- [Is a tree a BST?](/articles/tree_bst.md)
 
 ### Software Development
-- [Scaling](/scaling.md)
+- [Scaling](/articles/scaling.md)
