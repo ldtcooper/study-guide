@@ -60,3 +60,20 @@ We can also test actions/event listeners by using mock functions called spies. T
   // expects the spy function to be called with the todo with the id 1
   expect(doneChange).toBeCalledWith(1);
 ```
+
+## Snapshot Testing
+
+When you render a component, Jest can store a representation of that component as a JSON document that it can refer back to. Each time you make a change to the component, Jest will compare it to the snapshot and let you know if something vital changed. You can then see if this change was intentional, and either fix a mistake, or tell Jest to update the snapshot with your changes (by running tests with the `-u` flag). When run for the first time, Jest will know to take a screenshot.
+
+This uses `react-test-renderer` to render React components as JS objects that can be saved as JSON.
+
+```javascript
+  describe('Todo renders correctly', () => {
+    it('renders correctly', () => {
+      const todo = {id: 1, done: false, name: "buy milk"};
+      // rendered is a POJO representing the Todo component
+      const rendered = renderer.create(<Todo todo={todo}/>);
+      expect(rendered.toJSON()).toMatchSnapshot();
+    });
+  });
+```

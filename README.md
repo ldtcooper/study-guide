@@ -19,7 +19,7 @@ Here are some topics I've been looking into recently:
 - [Graphing](/articles/d3_graphing.md)
 
 ### Python
-- [Python I/articles/O](/articles/python_io.md)
+- [Python I/O](/articles/python_io.md)
 
 ### Programming Concepts
 - [Dynamic Programming](/articles/dynamic_programming.md)
