@@ -1,4 +1,4 @@
-#Is a Tree a BST?
+# Is a Tree a BST?
 
 Say you have the following tree:
 
