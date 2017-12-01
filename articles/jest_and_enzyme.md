@@ -31,3 +31,32 @@ For example: in a Todo app, one might have a `toggleDone` action that marks an a
   ]);
 
 ```
+
+## Enzyme
+- AirBnB's testing library that makes for easy React tests.
+
+- Enzyme's `mount` function renders a component so that our tests can examine it.
+- Jest uses the jsdom library, which renders a virtual DOM in node that we can use for tests without a browser.
+
+To test React components with Enzyme, we set up a sample prop, pass it into the component we are testing, find it with the `.find` function (which takes a CSS selector), then test it.
+
+```javascript
+  // assume this is all within a 'test' block
+  const todo = {id: 1, done: false, name: "buy milk"};
+  const wrapper = mount(<Todo todo={todo}/>);
+  const p = wrapper.find('.toggle-todo');
+  expect(p.test).toBe('buy milk');
+```
+
+We can also test actions/event listeners by using mock functions called spies. These are created with `jest.fn()`. Events can be triggered with the `.simulate` function, which takes a string representing an action (`click`, `mouseover`, etc.)
+
+```javascript
+  const todo = {id: 1, done: false, name: "buy milk"};
+  // here is the spy function
+  const doneChange = jest.fn();
+  const wrapper = mount(<Todo todo={todo} doneChange={doneChange}/>);
+  const p = wrapper.find('.toggle-todo');
+  p.simulate('click');
+  // expects the spy function to be called with the todo with the id 1
+  expect(doneChange).toBeCalledWith(1);
+```
