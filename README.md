@@ -23,7 +23,6 @@ Here are some topics I've been looking into recently:
 
 ### Programming Concepts
 - [Dynamic Programming](/articles/dynamic_programming.md)
-- [Responsive Design](/articles/responsive_design.md)
 
 #### Data Structures
 - [Is a tree a BST?](/articles/tree_bst.md)
@@ -31,3 +30,4 @@ Here are some topics I've been looking into recently:
 
 ### Software Development
 - [Scaling](/articles/scaling.md)
+- [Responsive Design](/articles/responsive_design.md)

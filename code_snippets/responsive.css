@@ -5,3 +5,13 @@
 .header h1 {
   font-size: 2em;
 }
+
+.parent {
+  width: 500px;
+  height: 500px;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+}
