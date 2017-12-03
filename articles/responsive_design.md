@@ -17,8 +17,8 @@ Responsive design aims to use relative values instead of fixed ones (like pixels
   ```
 - **rem:** Standing for Root em, 1rem represents the size of the base font used in the root element (<html>). rem sizing is good for keeping consistent size of elements across the page. em is better for sizing elements according to what is near them.
 
-- **percent:** Percent values size elements relative to their parent containers. Good for margins and padding because it takes into account the size of the parent. In the below example, the element `.child` will have a height and width of 250px.
-  ```css 
+- **percent:** Percent values size elements relative to the width of their parent containers. Good for margins and padding because it takes into account the size of the parent. In the below example, the element `.child` will have a height and width of 250px.
+  ```css
   .parent {
     width: 500px;
     height: 500px;
@@ -27,5 +27,17 @@ Responsive design aims to use relative values instead of fixed ones (like pixels
   .child {
     width: 50%;
     height: 50%;
+  }
+  ```
+  **NB:** When sizing text, or text -related elements (margin or padding around text) ems or rems should be used. Otherwise, percents should be used.
+
+## Sizing
+
+Even with relative units, elements on a page can still go wrong if the page gets too small or too large. This is where the min-width and max-width properties come into play. In the below example, the element `#relative-width-example` will never be smaller than 100px, and will never get larger than 500px.
+
+  ```css
+  #relative-width-example {
+    min-width: 100px;
+    max-width: 500px;
   }
   ```
