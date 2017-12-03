@@ -16,7 +16,23 @@
   height: 50%;
 }
 
-#height-example {
+#relative-width-example {
   min-width: 100px;
   max-width: 500px;
+}
+
+#img-container {
+  width: 50%;
+  height: 500px; /*or any fixed*/
+  overflow: hidden;
+}
+
+#img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#bg-img {
+  background-size: cover;
 }

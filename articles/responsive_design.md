@@ -33,11 +33,37 @@ Responsive design aims to use relative values instead of fixed ones (like pixels
 
 ## Sizing
 
-Even with relative units, elements on a page can still go wrong if the page gets too small or too large. This is where the min-width and max-width properties come into play. In the below example, the element `#relative-width-example` will never be smaller than 100px, and will never get larger than 500px.
+Even with relative units, elements on a page can still go wrong if the page gets too small or too large. This is where the min-width and max-width properties come into play (also works for height). In the below example, the element `#relative-width-example` will never be smaller than 100px, and will never get larger than 500px.
 
   ```css
   #relative-width-example {
     min-width: 100px;
     max-width: 500px;
+  }
+  ```
+
+The following is a common design pattern in CSS to make images scale correctly:
+
+  ```css
+  #img-container {
+    width: 50%;
+    height: 500px; /*or any fixed*/
+    overflow: hidden;
+  }
+
+  #img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  ```
+
+  This ensures that the image is in a box that will change width as it expands or contracts as well as hide extra content.
+
+To scale background images proportionally, set the background size property to cover:
+
+  ```css
+  #bg-img {
+    background-size: cover;
   }
   ```
