@@ -67,3 +67,27 @@ To scale background images proportionally, set the background size property to c
     background-size: cover;
   }
   ```
+
+## Media Queries
+
+Media queries let us apply different styles to websites depending on the size of the screen. The code below is an example of a media query.
+
+  ```css
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  ```
+
+The `only screen` portion is which types of media should get these styles (screen, print, etc.) while the parenthesized part after the `and` is the *media feature* -- other conditions that must be met for the styles to be applied. In this case, the styles will be applied to screens with a width 480px and under.
+
+Media features can also be chained with `and`. This is how to create ranges of screen size to apply styles to. For example, the below code will apply its styles to elements between 320 and 480 pixels. It can also be done with two separate queries
+
+  ```css
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    /*styles go here*/
+  }
+  ```
+
+Media queries can also target screen resolution (i.e. dots per inch/centimeter) to avoid downloading high-res images onto older machines that can't display them properly.
