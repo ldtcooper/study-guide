@@ -17,6 +17,7 @@ Here are some topics I've been looking into recently:
 - [Basics](/articles/d3_basics.md)
 - [Scales](/articles/d3_scales.md)
 - [Graphing](/articles/d3_graphing.md)
+- [Events](/articls/d3_events.md)
 
 ### Python
 - [Python I/O](/articles/python_io.md)
