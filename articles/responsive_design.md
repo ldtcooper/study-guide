@@ -90,4 +90,22 @@ Media features can also be chained with `and`. This is how to create ranges of s
   }
   ```
 
-Media queries can also target screen resolution (i.e. dots per inch/centimeter) to avoid downloading high-res images onto older machines that can't display them properly.
+Media queries can also target screen resolution (i.e. dots per inch/centimeter) to avoid downloading high-res images onto older machines that can't display them properly. The below example will only apply its styles to devices with screens of >=300dpi.
+
+  ```css
+  @media only screen and (min-resolution: 300dpi) {
+    /*styles go here*/
+  }
+  ```
+
+The `and` operator can be used to chain features together if all of them must be met. If only one must be met, they can be chained with commas:
+
+  ```css
+  @media only screen and (min-width: 480), (orientation: landscape) {
+    /*styles go here*/
+  }
+  ```
+
+The above example also uses the `orientation: landscape` feature, which checks to see if the screen is wider than it is tall.
+
+Breakpoints are the sizes at which the content on a page breaks.
